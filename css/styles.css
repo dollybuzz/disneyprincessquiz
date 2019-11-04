@@ -2,6 +2,7 @@ body {
     background-image: url('castle.png');
     background-position: top;
     text-align: center;
+    margin: auto;
     color: gold;
     text-shadow: 1px 1px black;
 }
@@ -32,6 +33,7 @@ header:hover {
 
 .row {
     width: auto;
+    height: auto;
     margin: auto;
     padding: 20px;
 }
