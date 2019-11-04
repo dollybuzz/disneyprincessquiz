@@ -36,14 +36,12 @@ header:hover {
     margin: auto;
 }
 
-
 .block {
     display: inline-block;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .btn {
     font-family: 'Dancing Script', cursive;
@@ -52,7 +50,6 @@ header:hover {
     background-color: white;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 .btn:hover {
