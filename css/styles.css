@@ -16,7 +16,6 @@ h1 {
 
 h3 {
     font-family: 'Dancing Script', cursive;
-    font-weight: bold;
     text-align: center;
 }
 
@@ -35,14 +34,14 @@ header:hover {
     width: auto;
     height: auto;
     margin: auto;
-    padding: 20px;
 }
 
 
 .block {
-    width: auto;
     display: inline-block;
-    padding-left: 100px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
