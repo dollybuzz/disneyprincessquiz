@@ -11,10 +11,15 @@
 </head>
 
 <header>
+    <audio controls id="music">
+            <source src="sound/magic.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+    </audio>
     <br>
     <h1 id="fireShow">Which Disney Princess are you?</h1>
     <div id="fireHide" class="fireHiding">
         <img src="img/fireworks.png">
+        
     </div>
 </header>
 
@@ -53,26 +58,38 @@
     <label for="pr" class="radio-label" id="lpr">purple</label>
     <input type="radio" name="q3" id="ba" value="black"/> 
     <label for="ba" class="radio-label" id="lba">black</label>
-    <br>
-    </div>
-    
-    <div class="block">
-    <h3> Which companion do you prefer? </h3>
-    <div id="q4Choices"></div>
     
     <br><br>
     
-    <h3><span id="markImg5"></span> What do you value the most? </h3>
-    <img src="img/seal1.png" alt="Seal 1" class="q5Choice" id="seal1">
-    <img src="img/seal2.png" alt="Seal 2" class="q5Choice" id="seal2">
-    <img src="img/seal3.png" alt="Seal 3" class="q5Choice" id="seal3">
+    <h3> What do you value the most? </h3>
+    <input type="radio" name="q4" id="fa" value="family"/>
+    <label for="fa" class="radio-label2">family</label>
+    <input type="radio" name="q4" id="fr" value="freedom"/> 
+    <label for="fr" class="radio-label2">freedom</label><br>
+    <input type="radio" name="q4" id="in" value="independence"/> 
+    <label for="in" class="radio-label2">independence</label>
+    <input type="radio" name="q4" id="po" value="power"/> 
+    <label for="po" class="radio-label2">power</label>
+    <input type="radio" name="q4" id="lo" value="love"/> 
+    <label for="lo" class="radio-label2">love</label>
+    </div>
+    
+    <div class="block">
+    <h3> Choose a companion: </h3>
+    <img src="img/dog.jpg" alt="dog" class="q5" id="dog">
+    <img src="img/bear.jpg" alt="bear" class="q5" id="bear">
+    <br>
+    <img src="img/frog.jpg" alt="frog" class="q5" id="frog">
+    <img src="img/mouse.jpg" alt="mouse" class="q5" id="mouse">
+    <img src="img/reindeer.jpg" alt="reindeer" class="q5" id="reindeer">
     
     <br><br>
     
     <h3> Which scene do you prefer?</h3>
-    <input type="text" id="q6">
+
     
-    <br><br>
+    
+
     
     </div>
 </div>
@@ -80,6 +97,31 @@
 <footer>
     <h3 id="validationFdbk" class="bg-danger text-white"></h3>
     <button id="myButton" type="button" class="btn btn-lg"><a href="princess.html" id="buttonref"> Submit Quiz </a></button>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="block">
+            <h4>
+            <strong>CST336 Internet Programming<br>2019 <span style="color:royalblue">&copy;</span> Dalia Faria<br/></strong>
+            <span style="color:royalblue">Disclaimer:</span> This webpage was<br>created for academic purposes only.
+            <br>
+            <img src="img/csumb.png" alt="CSUMB Logo">
+            </h4>
+        </div>
+        
+        <div class="block">
+            <h4><strong><span style="color:royalblue">Sources</span></strong><br>
+            [Castle Background]. Retrieved from <a href="https://www.pinterest.com/pin/352758583291216760/" style="color:royalblue">pinterest.com</a>.<br>
+            [Fireworks]. Retrieved from <a href="https://retohercules.com/explore/gold-glitter-vector-png.html" style="color:royalblue">retohercules.com</a>.<br>
+            [Animal Icons]. Retrieved from <a href="https://stock.adobe.com/images/animal-icon-and-cartoon-pets-icon-style-colorful-flat-icons/130481084" style="color:royalblue">stock.adobe.com</a>.<br>
+            [Scene Icons]. Retrieved from <a href="https://www.freepik.com/premium-vector/modern-beautiful-landscape-with-gradients-sunrise-dawn-morning-day-noon-sunset-dusk-night-icon-sun-time-vector-icons-set_4422240.htm" style="color:royalblue">freepik.com</a>.<br>
+            [Princesses]. Retrieved from <a href="https://pixabay.com/users/inspiredbythemuse-3854162/" style="color:royalblue">pixabay.com</a>.<br>
+            </h4>
+        </div>    
+    
+
+    
+    </div>
 </footer>
 </body>
 

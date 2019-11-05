@@ -2,6 +2,7 @@ $(document).ready(function(){
            
            //global variables
            var maxScores = [];
+           var music = document.getElementById("music");
            var largestValue = 0;
            var yourName = "";
            var yourPrincess = "";
@@ -17,8 +18,19 @@ $(document).ready(function(){
     
            //event listeners
            $("#fireHide").hide();
+           $("#music").hide();
            $("#fireShow").hover(function() {
                $('div').show();
+               music.play();
+           });
+           
+           $("img").click(function() {
+                      $(".q5").css("border-color", "");
+                      $(this).css("border-color", "rgb(49, 82 ,245)");
+           });
+           
+           $("button").hover(function() {
+                      music.play();
            });
            $("button").on("click", submitQuiz());
            

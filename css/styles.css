@@ -1,10 +1,15 @@
+audio {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+}
+
 body {
     background-image: url('castle.png');
     background-position: top;
     text-align: center;
     margin: auto;
     color: gold;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px royalblue;
 }
 
 h1 {
@@ -23,7 +28,7 @@ header {
     text-align: center;
     font-weight: bold;
     color: gold;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px royalblue;
 }
 
 header:hover {
@@ -54,7 +59,7 @@ header:hover {
 }
 
 .btn:hover {
-    color: black ;
+    color: royalblue ;
     font-weight: bold;
     background-color: gold;
 }
@@ -66,18 +71,27 @@ header:hover {
 
 #q1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: royalblue;
 }
 
 #q2 {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: royalblue;
 }
 
 .radio-label {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.2em;
+    font-size: 1.4em;
     padding-right: 20px;
+}
+
+.radio-label2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
+    padding-right: 20px;
+    color: royalblue;
 }
 
 #lre {
@@ -106,4 +120,21 @@ header:hover {
 
 #lba {
     color:black;
+}
+
+.q5 {
+    box-shadow: 0px 12px 22px 1px #333;
+    border: solid 2px gold;
+    margin: 10px;
+}
+
+h4 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+h4 a:hover {
+    text-decoration: none;
+    font-style: italic;
 }
