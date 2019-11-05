@@ -98,39 +98,167 @@ var maxScores = [];
                       }
                       return isValid;
            } 
-
-
-           function submitQuiz()
+           
+           function setName()
            {
-                      //resets validation
-                      $("#validation").html("");
-                      
-                      //local variables
                       let yourName = $("#q1").val();
-                      
-                      //call functions
-                      setName();
+                      document.getElementById("insertName").innerHTML = yourName;
+           }
+           
+           function setPrincess()
+           {
+                      document.getElementById("insertPrincess").innerHTML = "Princess " + yourPrincess;
+           }
+           
+           function setVillian()
+           {
+                      document.getElementById("insertPrincess").innerHTML = "the villian, " + yourPrincess;
+           }
+           
+           function setCharIcon()
+           {
+                      document.getElementById("charIcon").innerHTML = "<img src='img/"+ yourPrincess.toLowerCase() + ".png' alt='CharacterIcon'>";
+           }
 
-                      function setName()
+           function increaseScore(princess, passedname1, passedname2)
+           {
+               for(var i=0; i<princess.length; i++)
+               {
+                   if(princess[i].name == passedname1)
+                   {
+                       princess[i].score += 1;
+                   }
+                   if(princess[i].name == passedname2)
+                   {
+                              princess[i].score += 1;
+                   }
+               }
+           }
+           
+           function evaluate()
+           {          
+                      //question 2
+                      if($("#q2").val() == "1")
                       {
-                                 document.getElementById("insertName").innerHTML = yourName;
+                          increaseScore(princess,"Anna", "Mulan");
+                      }
+                      if($("#q2").val() == "2")
+                      {
+                          increaseScore(princess,"Tiana", null);
+                      }
+                      if($("#q2").val() == "3")
+                      {
+                          increaseScore(princess,"Merida", null);
+                      }
+                      if($("#q2").val() == "4")
+                      {
+                          increaseScore(princess,"Elsa", null);
+                      }
+                      if($("#q2").val() == "5")
+                      {
+                          increaseScore(princess,"Cruella", null);
                       }
                       
-                      //manipulates scoring
-                      for(var i= 0; i < princess.length; i++)
+                      //question 3
+                      if($("iput[name=q3]:checked").val() == "red")
                       {
-                                 if(princess[i].name === "Tiana")
-                                 {
-                                            princess[i].score += 3;
-                                 }
-    
-                                 if(princess[i].name === "Mulan")
-                                 {
-                                            princess[i].score += 3;
-                                 }
+                          increaseScore(princess,"Anna", null);
                       }
-
-                      //parses through the princesses to search for highest score
+                      if($("iput[name=q3]:checked").val() == "orange")
+                      {
+                          increaseScore(princess,"Tiana", null);
+                      }
+                      if($("iput[name=q3]:checked").val() == "yellow")
+                      {
+                          increaseScore(princess,"Cinderella", null);
+                      }
+                      if($("iput[name=q3]:checked").val() == "green")
+                      {
+                          increaseScore(princess,"Merida", null);
+                      }
+                      if($("iput[name=q3]:checked").val() == "blue")
+                      {
+                          increaseScore(princess,"Elsa", null);
+                      }
+                      if($("iput[name=q3]:checked").val() == "purple")
+                      {
+                          increaseScore(princess,"Mulan", null);
+                      }
+                      if($("iput[name=q3]:checked").val() == "black")
+                      {
+                          increaseScore(princess,"Cruella", null);
+                      }
+                      
+                      //question 4
+                      if($("iput[name=q4]:checked").val() == "family")
+                      {
+                          increaseScore(princess,"Elsa", "Mulan");
+                      }
+                      if($("iput[name=q4]:checked").val() == "freedom")
+                      {
+                          increaseScore(princess,"Merida", null);
+                      }
+                      if($("iput[name=q4]:checked").val() == "independence")
+                      {
+                          increaseScore(princess,"Tiana", null);
+                      }
+                      if($("iput[name=q4]:checked").val() == "power")
+                      {
+                          increaseScore(princess,"Cruella", null);
+                      }
+                      if($("iput[name=q4]:checked").val() == "love")
+                      {
+                          increaseScore(princess,"Anna", "Cinderella");
+                      }
+                      
+                      //question 5
+                      if($("#dog").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                              increaseScore(princess, "Cruella", "Mulan");   
+                      }
+                      if($("#bear").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                                 increaseScore(princess, "Merida", null);
+                      }
+                      if($("#frog").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                                 increaseScore(princess, "Tiana", null);
+                      }
+                      if($("#mouse").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                                 increaseScore(princess, "Cinderella", null);
+                      }
+                      if($("#reindeer").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                                 increaseScore(princess, "Anna", "Elsa");
+                      }
+                      
+                      //question 6
+                      if($("#dawn").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                                 increaseScore(princess, "Anna", "Mulan");
+                      }
+                      if($("#daylight").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                                 increaseScore(princess, "Tiana", "Elsa");
+                      }
+                      if($("#setting").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                                 increaseScore(princess, "Merida", "Cruella");
+                      }
+                      if($("#dusk").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                                 increaseScore(princess, "Cinderella", "Elsa");
+                      }
+                      if($("#night").css("border-color", "rgb(49, 82 ,245)"))
+                      {
+                                 increaseScore(princess, "Cruella", "Tiana");
+                      }
+                      
+           }
+           
+           function findMax()
+           {
                       for(i = 0; i < princess.length; i++)
                       {
                                  for( var k = 0; k <princess.length; i++)
@@ -145,12 +273,30 @@ var maxScores = [];
                                                        yourPrincess = princess[i].name;
                                             }
                                  }
-                                 return console.log(yourPrincess);
                       }
-           
-           
-           
-           
+           }
+          
+
+           function submitQuiz()
+           {
+                      //resets validation
+                      $("#validation").html("");
+                      
+                      //call functions
+                      setName();
+                      evaluate();
+                      findMax();
+                      
+                      if(yourPrincess == "Cruella")
+                      {
+                                 setVillian();
+                                 setCharIcon();
+                      }
+                      else
+                      {
+                                 setPrincess();
+                                 setCharIcon();
+                      }
            }
 })
         

@@ -63,10 +63,6 @@ header:hover {
     background-color: gold;
 }
 
-#buttonref {
-    text-decoration: none;
-    color: inherit;
-}
 
 #q1 {
     font-family: 'Dancing Script', cursive;
@@ -146,5 +142,20 @@ h4 a:hover {
 
 #results {
     float: left;
+    padding-top: 100px;
     padding-left: 50px;
+}
+
+#insertPrincess {
+    font-size: 1.8em;
+}
+
+#insertPrincess:hover {
+    font-style: italic;
+    color: white;
+    text-shadow: 1px 1px gold;
+}
+
+footer {
+    padding-top: 100px;
 }
