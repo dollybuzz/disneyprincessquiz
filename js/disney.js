@@ -27,12 +27,12 @@ var maxScores = [];
            
            $(".q5").click(function() {
                       $(".q5").css("border-color", "");
-                      $(this).css("border-color", "rgb(49, 82 ,245)");
+                      $(this).css("border-color", "rgb(49, 82, 245)");
            });
            
            $(".q6").click(function() {
                       $(".q6").css("border-color", "");
-                      $(this).css("border-color", "rgb(49, 82 ,245)");
+                      $(this).css("border-color", "rgb(49, 82, 245)");
            });
            
            $("button").hover(function() {
@@ -40,13 +40,11 @@ var maxScores = [];
            });
            
            $("button").click(function() {
-                      submitQuiz();
-                      
                       //checks for validation first
                       if(isFormValid())
                       {          
+                                 submitQuiz();
                                  $('#results').show();
-                                 
                       }
                       else  
                                  return;
@@ -56,7 +54,6 @@ var maxScores = [];
 //functions
            function isFormValid()
            {
-                      
                       let isValid = true;
                       if($("#q1").val() == "")
                       {
@@ -122,7 +119,7 @@ var maxScores = [];
 
            function increaseScore(princess, passedname1, passedname2)
            {
-               for(var i=0; i<princess.length; i++)
+               for(var i=0; i < princess.length; i++)
                {
                    if(princess[i].name == passedname1)
                    {
@@ -137,120 +134,124 @@ var maxScores = [];
            
            function evaluate()
            {          
+                      let q2Response = $("#q2").val();
+                      let q3Response = $("input[name=q3]:checked").val();
+                      let q4Response = $("input[name=q4]:checked").val();
+                      
                       //question 2
-                      if($("#q2").val() == "1")
+                      if(q2Response == "1")
                       {
                           increaseScore(princess,"Anna", "Mulan");
                       }
-                      if($("#q2").val() == "2")
+                      if(q2Response == "2")
                       {
                           increaseScore(princess,"Tiana", null);
                       }
-                      if($("#q2").val() == "3")
+                      if(q2Response == "3")
                       {
                           increaseScore(princess,"Merida", null);
                       }
-                      if($("#q2").val() == "4")
+                      if(q2Response == "4")
                       {
-                          increaseScore(princess,"Elsa", null);
+                          increaseScore(princess,"Elsa", "Cinderella");
                       }
-                      if($("#q2").val() == "5")
+                      if(q2Response == "5")
                       {
                           increaseScore(princess,"Cruella", null);
                       }
                       
                       //question 3
-                      if($("iput[name=q3]:checked").val() == "red")
+                      if(q3Response == "red")
                       {
                           increaseScore(princess,"Anna", null);
                       }
-                      if($("iput[name=q3]:checked").val() == "orange")
+                      if(q3Response == "orange")
                       {
                           increaseScore(princess,"Tiana", null);
                       }
-                      if($("iput[name=q3]:checked").val() == "yellow")
+                      if(q3Response == "yellow")
                       {
                           increaseScore(princess,"Cinderella", null);
                       }
-                      if($("iput[name=q3]:checked").val() == "green")
+                      if(q3Response == "green")
                       {
                           increaseScore(princess,"Merida", null);
                       }
-                      if($("iput[name=q3]:checked").val() == "blue")
+                      if(q3Response == "blue")
                       {
                           increaseScore(princess,"Elsa", null);
                       }
-                      if($("iput[name=q3]:checked").val() == "purple")
+                      if(q3Response == "purple")
                       {
                           increaseScore(princess,"Mulan", null);
                       }
-                      if($("iput[name=q3]:checked").val() == "black")
+                      if(q3Response == "black")
                       {
                           increaseScore(princess,"Cruella", null);
                       }
                       
                       //question 4
-                      if($("iput[name=q4]:checked").val() == "family")
+                      if(q4Response == "family")
                       {
                           increaseScore(princess,"Elsa", "Mulan");
                       }
-                      if($("iput[name=q4]:checked").val() == "freedom")
+                      if(q4Response == "freedom")
                       {
                           increaseScore(princess,"Merida", null);
                       }
-                      if($("iput[name=q4]:checked").val() == "independence")
+                      if(q4Response == "independence")
                       {
                           increaseScore(princess,"Tiana", null);
                       }
-                      if($("iput[name=q4]:checked").val() == "power")
+                      if(q4Response == "power")
                       {
                           increaseScore(princess,"Cruella", null);
                       }
-                      if($("iput[name=q4]:checked").val() == "love")
+                      if(q4Response == "love")
                       {
                           increaseScore(princess,"Anna", "Cinderella");
                       }
                       
                       //question 5
-                      if($("#dog").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#dog").css("border-color") == "rgb(49, 82, 245)")
                       {
                               increaseScore(princess, "Cruella", "Mulan");   
                       }
-                      if($("#bear").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#bear").css("border-color") == "rgb(49, 82, 245)")
                       {
                                  increaseScore(princess, "Merida", null);
                       }
-                      if($("#frog").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#frog").css("border-color") == "rgb(49, 82, 245)")
                       {
                                  increaseScore(princess, "Tiana", null);
                       }
-                      if($("#mouse").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#mouse").css("border-color") == "rgb(49, 82, 245)")
                       {
                                  increaseScore(princess, "Cinderella", null);
                       }
-                      if($("#reindeer").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#reindeer").css("border-color") == "rgb(49, 82, 245)")
                       {
                                  increaseScore(princess, "Anna", "Elsa");
                       }
                       
                       //question 6
-                      if($("#dawn").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#dawn").css("border-color") == "rgb(49, 82, 245)")
                       {
                                  increaseScore(princess, "Anna", "Mulan");
                       }
-                      if($("#daylight").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#daylight").css("border-color") == "rgb(49, 82, 245)")
                       {
                                  increaseScore(princess, "Tiana", "Elsa");
                       }
-                      if($("#setting").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#setting").css("border-color") == "rgb(49, 82, 245)")
                       {
                                  increaseScore(princess, "Merida", "Cruella");
                       }
-                      if($("#dusk").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#dusk").css("border-color") == "rgb(49, 82, 245)")
                       {
                                  increaseScore(princess, "Cinderella", "Elsa");
                       }
-                      if($("#night").css("border-color", "rgb(49, 82 ,245)"))
+                      if($("#night").css("border-color") == "rgb(49, 82, 245)")
                       {
                                  increaseScore(princess, "Cruella", "Tiana");
                       }
