@@ -143,3 +143,8 @@ h4 a:hover {
     border: solid 2px gold;
     margin: 10px;
 }
+
+#results {
+    float: left;
+    padding-left: 50px;
+}
