@@ -1,3 +1,4 @@
+//page ready
 $(document).ready(function(){
            
            //global variables
@@ -16,24 +17,31 @@ $(document).ready(function(){
                       {name: "Tiana", score:0}
            ];
     
-           //event listeners
-           $("#fireHide").hide();
+//event listeners
+           $(".fireHide").hide();
+           
            $("#fireShow").hover(function() {
-               $('div').show();
+               $('.fireHide').show();
                music.play();
            });
            
-           $("img").click(function() {
+           $(".q5").click(function() {
                       $(".q5").css("border-color", "");
+                      $(this).css("border-color", "rgb(49, 82 ,245)");
+           });
+           
+           $(".q6").click(function() {
+                      $(".q6").css("border-color", "");
                       $(this).css("border-color", "rgb(49, 82 ,245)");
            });
            
            $("button").hover(function() {
                       music.play();
            });
+           
            $("button").on("click", submitQuiz());
            
-           //functions - must wrap as functions
+//functions - must wrap as functions
            function submitQuiz()
            {
                       let q1Response = $("#q1").val().ToLowerCase();
@@ -74,8 +82,6 @@ $(document).ready(function(){
            
            
            
-           
-           
            }
-})//ready
+})
         
