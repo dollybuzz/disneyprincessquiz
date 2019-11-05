@@ -23,6 +23,7 @@ header {
     text-align: center;
     font-weight: bold;
     color: gold;
+    text-shadow: 1px 1px black;
 }
 
 header:hover {
@@ -61,4 +62,48 @@ header:hover {
 #buttonref {
     text-decoration: none;
     color: inherit;
+}
+
+#q1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+}
+
+#q2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+}
+
+.radio-label {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    padding-right: 20px;
+}
+
+#lre {
+    color: crimson;
+}
+
+#lor {
+    color: darkorange;
+}
+
+#lye {
+    color: yellow;
+}
+
+#lgr {
+    color: yellowgreen;
+}
+
+#lbu {
+    color: dodgerblue;
+}
+
+#lpr {
+    color: rebeccapurple;
+}
+
+#lba {
+    color:black;
 }

@@ -3,6 +3,7 @@ $(document).ready(function(){
            //global variables
            var maxScores = [];
            var largestValue = 0;
+           var yourName = "";
            var yourPrincess = "";
            var princess = [
                       {name: "Anna", score:0},
@@ -13,46 +14,57 @@ $(document).ready(function(){
                       {name: "Mulan", score:0},
                       {name: "Tiana", score:0}
            ];
-
     
-           //fireworks header
+           //event listeners
            $("#fireHide").hide();
            $("#fireShow").hover(function() {
                $('div').show();
-           })
+           });
+           $("button").on("click", submitQuiz());
            
            //functions - must wrap as functions
-           //manipulates scoring
-           for(var i= 0; i < princess.length; i++)
+           function submitQuiz()
            {
-                      if(princess[i].name === "Tiana")
+                      let q1Response = $("#q1").val().ToLowerCase();
+                      q1Response = q1Response.val().charAt(0).ToUpperCase();
+           
+                      //manipulates scoring
+                      for(var i= 0; i < princess.length; i++)
                       {
-                                 princess[i].score += 3;
-                      }
-    
-                      if(princess[i].name === "Mulan")
-                      {
-                                 princess[i].score += 3;
-                      }
-           }
-
-           //parses through the princesses to search for highest score
-           for(i = 0; i < princess.length; i++)
-           {
-                      for( var k = 0; k <princess.length; i++)
-                      {
-                                 maxScores[k] = princess[i].score;
-                                 k++;
-        
-                                 largestValue = Math.max.apply(Math, maxScores);
-
-                                 if(princess[i].score == largestValue)
+                                 if(princess[i].name === "Tiana")
                                  {
-                                            yourPrincess = princess[i].name;
+                                            princess[i].score += 3;
+                                 }
+    
+                                 if(princess[i].name === "Mulan")
+                                 {
+                                            princess[i].score += 3;
                                  }
                       }
-                      return console.log(yourPrincess);
-           }
+
+                      //parses through the princesses to search for highest score
+                      for(i = 0; i < princess.length; i++)
+                      {
+                                 for( var k = 0; k <princess.length; i++)
+                                 {
+                                            maxScores[k] = princess[i].score;
+                                            k++;
+        
+                                            largestValue = Math.max.apply(Math, maxScores);
+
+                                            if(princess[i].score == largestValue)
+                                            {
+                                                       yourPrincess = princess[i].name;
+                                            }
+                                 }
+                                 return console.log(yourPrincess);
+                      }
            
+           
+           
+           
+           
+           
+           }
 })//ready
         
