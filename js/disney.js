@@ -18,7 +18,6 @@ $(document).ready(function(){
     
            //event listeners
            $("#fireHide").hide();
-           $("#music").hide();
            $("#fireShow").hover(function() {
                $('div').show();
                music.play();
